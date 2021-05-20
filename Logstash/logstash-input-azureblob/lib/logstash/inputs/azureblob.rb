@@ -135,8 +135,8 @@ class LogStash::Inputs::LogstashInputAzureblob < LogStash::Inputs::Base
 
   public
   def register
-    user_agent = 'logstash-input-azureblob'
-    user_agent << '/' << Gem.latest_spec_for('logstash-input-azureblob').version.to_s
+    user_agent = 'logstash-input-azureblob-offline'
+    user_agent << '/' << Gem.loaded_specs['logstash-input-azureblob-offline'].version.to_s
 
     # this is the reader # for this specific instance.
     @reader = SecureRandom.uuid
