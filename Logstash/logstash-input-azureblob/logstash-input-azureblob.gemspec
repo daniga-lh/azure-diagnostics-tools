@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'logstash-input-azureblob-offline'
-  s.version       = '0.9.13'
+  s.version       = '0.9.13.2'
   s.platform      = 'java'
   s.licenses      = ['Apache-2.0']
   s.summary       = 'This plugin collects Microsoft Azure Diagnostics data from Azure Storage Blobs without contacting rubygems.org at runtime.'

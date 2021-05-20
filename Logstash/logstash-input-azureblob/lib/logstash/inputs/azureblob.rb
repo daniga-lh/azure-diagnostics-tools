@@ -41,7 +41,7 @@ end # class RegistryItem
 #
 # This logstash plugin gathers data from Microsoft Azure Blobs
 class LogStash::Inputs::LogstashInputAzureblob < LogStash::Inputs::Base
-  config_name 'azureblob-offline'
+  config_name 'azureblob'
 
   # If undefined, Logstash will complain, even if codec is unused.
   default :codec, 'json_lines'
