@@ -41,7 +41,7 @@ end # class RegistryItem
 #
 # This logstash plugin gathers data from Microsoft Azure Blobs
 class LogStash::Inputs::LogstashInputAzureblob < LogStash::Inputs::Base
-  config_name 'azureblob'
+  config_name 'azureblob-offline'
 
   # If undefined, Logstash will complain, even if codec is unused.
   default :codec, 'json_lines'
@@ -136,7 +136,6 @@ class LogStash::Inputs::LogstashInputAzureblob < LogStash::Inputs::Base
   public
   def register
     user_agent = 'logstash-input-azureblob-offline'
-    user_agent << '/' << Gem.loaded_specs['logstash-input-azureblob-offline'].version.to_s
 
     # this is the reader # for this specific instance.
     @reader = SecureRandom.uuid
